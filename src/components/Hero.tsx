@@ -3,7 +3,7 @@ import { Play, Award, Users, Camera } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-black min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-black min-h-screen flex items-center mt-12  overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>

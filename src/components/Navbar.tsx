@@ -3,10 +3,13 @@ import React from 'react';
 import Image from 'next/image';
 
 const navLinks = [
-  { name: 'Home', href: '#' },
-  { name: 'Portfolio', href: '#' },
-  { name: 'About', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'Home', href: '#hero' },
+  { name: 'Empowering Her', href: '#empowering' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'Blog', href: '#blog' },
+  { name: 'Team', href: '#team' },
+  { name: 'Services', href: '#services' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -14,7 +17,7 @@ export default function Navbar() {
     <nav className="w-full bg-black flex items-center justify-between px-8 py-4 fixed top-0 left-0 z-50 shadow-lg">
       <div className="flex items-center">
         <Image
-          src="/photo/photo.jpg"
+          src="/photo.webp"
           alt="Logo"
           width={48}
           height={48}
