@@ -6,7 +6,7 @@ import { useContext } from "react"
 import { ThemeContext } from "../context/ThemeContext"
 
 export default function HeroSection() {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
   return (
     <section
