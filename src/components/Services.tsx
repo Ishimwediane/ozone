@@ -1,4 +1,6 @@
 import { FaRegCalendarAlt, FaUserTie, FaFilm, FaUsers, FaHandHoldingHeart } from "react-icons/fa"
+import { useContext } from "react"
+import { ThemeContext } from "./Navbar"
 
 const services = [
   {
@@ -29,17 +31,18 @@ const services = [
 ]
 
 export default function Services() {
+  const { theme } = useContext(ThemeContext)
   return (
-    <section id="services" className="bg-black py-16 px-4">
+    <section id="services" className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} py-16 px-4`}>
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-yellow-400 font-serif mb-4">Our Services</h2>
-        <p className="text-gray-300 text-lg mb-10">Explore the range of creative and empowering services we offer.</p>
+        <h2 className={`text-4xl font-bold font-serif mb-4 ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-400'}`}>Our Services</h2>
+        <p className={`text-lg mb-10 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'}`}>Explore the range of creative and empowering services we offer.</p>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-yellow-400/10 rounded-2xl p-8 flex flex-col items-start shadow-lg">
+            <div key={idx} className={`p-8 flex flex-col items-start shadow-lg bg-yellow-400/10 ${theme === 'dark' ? '' : 'bg-yellow-100'}`}>
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-yellow-400 mb-2 font-serif text-left">{service.name}</h3>
-              <p className="text-gray-300 text-sm text-left">{service.desc}</p>
+              <h3 className={`text-xl font-bold font-serif mb-2 text-left ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-500'}`}>{service.name}</h3>
+              <p className={`text-sm text-left ${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'}`}>{service.desc}</p>
             </div>
           ))}
         </div>

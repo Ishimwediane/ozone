@@ -38,6 +38,8 @@ export default function EmpoweringHer() {
     <video
       src="/videography.mp4"
       controls
+      autoPlay
+      muted
       className="w-full h-full object-cover bg-black"
       poster="/vid.png"
     />

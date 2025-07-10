@@ -1,12 +1,15 @@
 import Image from "next/image"
 import { Play, Award, Users, Camera } from "lucide-react"
+import { useContext } from "react"
+import { ThemeContext } from "./Navbar"
 
 export default function HeroSection() {
+  const { theme } = useContext(ThemeContext)
   return (
-    <section className="relative bg-black min-h-screen flex items-center mt-12  overflow-hidden">
+    <section className={`relative min-h-screen flex items-center overflow-hidden ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
+      <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-5' : 'opacity-10'}`}>
+        <div className={`absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent`}></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-yellow-400/5 to-transparent"></div>
       </div>
 
@@ -22,14 +25,14 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+              <h1 className={`text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                 CAPTURING
                 <span className="block text-yellow-400">MOMENTS</span>
                 <span className="block">EMPOWERING</span>
                 <span className="block text-yellow-400">DREAMS</span>
               </h1>
 
-              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
+              <p className={`text-xl leading-relaxed max-w-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 Professional photography, videography, modeling, and event management services. We specialize in
                 empowering women through creative storytelling and visual excellence.
               </p>
@@ -39,15 +42,15 @@ export default function HeroSection() {
             <div className="grid grid-cols-3 gap-6 py-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-400">500+</div>
-                <div className="text-sm text-gray-400">Projects</div>
+                <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'}`}>Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-400">50+</div>
-                <div className="text-sm text-gray-400">Events</div>
+                <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'}`}>Events</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-400">100+</div>
-                <div className="text-sm text-gray-400">Models</div>
+                <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'}`}>Models</div>
               </div>
             </div>
 
