@@ -35,12 +35,27 @@ export default function Component() {
       <div className="text-center relative flex items-center justify-center">
         {/* Left Arrow */}
         <button
-          onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
+          onClick={() =>
+            setCurrentTestimonial((prev) =>
+              prev === 0 ? testimonials.length - 1 : prev - 1
+            )
+          }
           className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-yellow-400/20 hover:bg-yellow-400/40 text-yellow-400 border border-yellow-400 transition-colors z-10"
           aria-label="Previous testimonial"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
           </svg>
         </button>
 
@@ -49,7 +64,9 @@ export default function Component() {
           {/* Header with yellow underline */}
           <div className="mb-12">
             <div className="inline-block">
-              <h2 className="text-4xl font-serif text-yellow-400 mb-2">Testimonials</h2>
+              <h2 className="text-4xl font-serif text-yellow-400 mb-2">
+                Testimonials
+              </h2>
               <div className="w-16 h-0.5 bg-yellow-400 mx-auto"></div>
             </div>
           </div>
@@ -68,11 +85,13 @@ export default function Component() {
           </div>
 
           {/* Name */}
-          <h3 className="text-xl font-serif text-yellow-400 mb-6">{testimonials[currentTestimonial].name}</h3>
+          <h3 className="text-xl font-serif text-yellow-400 mb-6">
+            {testimonials[currentTestimonial].name}
+          </h3>
 
           {/* Testimonial Quote */}
           <blockquote className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-8 font-light min-h-[4rem]">
-            "{testimonials[currentTestimonial].quote}"
+            {`"${testimonials[currentTestimonial].quote}"`}
           </blockquote>
 
           {/* Pagination Dots */}
@@ -81,7 +100,9 @@ export default function Component() {
               <span
                 key={index}
                 className={`w-2 h-2 rounded-full transition-colors inline-block ${
-                  index === currentTestimonial ? "bg-yellow-400" : "bg-yellow-400/30"
+                  index === currentTestimonial
+                    ? "bg-yellow-400"
+                    : "bg-yellow-400/30"
                 }`}
               />
             ))}
@@ -90,12 +111,27 @@ export default function Component() {
 
         {/* Right Arrow */}
         <button
-          onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
+          onClick={() =>
+            setCurrentTestimonial((prev) =>
+              prev === testimonials.length - 1 ? 0 : prev + 1
+            )
+          }
           className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-yellow-400/20 hover:bg-yellow-400/40 text-yellow-400 border border-yellow-400 transition-colors z-10"
           aria-label="Next testimonial"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
           </svg>
         </button>
       </div>
