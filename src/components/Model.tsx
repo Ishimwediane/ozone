@@ -1,10 +1,10 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import { VolumeX, Volume2, ChevronUp } from "lucide-react"
+//import { VolumeX, Volume2, ChevronUp } from "lucide-react"
 
 export default function VideoHero() {
-  const [isMuted, setIsMuted] = useState(true)
+  const [isMuted] = useState(true)
   const [scrollY, setScrollY] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
 
