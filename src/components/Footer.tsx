@@ -30,7 +30,9 @@ export default function Footer() {
       const elapsed = timestamp - start;
 
       scrollAmount = (elapsed * 0.05) % totalWidth;
-      slider.scrollLeft = scrollAmount;
+      if (slider) {
+  slider.scrollLeft = scrollAmount;
+}
 
       animationFrame = requestAnimationFrame(animate);
     }
