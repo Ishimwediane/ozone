@@ -1,6 +1,6 @@
 "use client"
 
-import { useTheme } from "@/components/theme-provider"
+import { useTheme } from "./ThemeContext"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Moon, Sun } from "lucide-react"
