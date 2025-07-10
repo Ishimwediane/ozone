@@ -5,11 +5,11 @@ import { useRef, useState, useEffect } from "react"
 
 export default function VideoHero() {
   const [isMuted] = useState(true)
-  const [scrollY, setScrollY] = useState(0)
+ // const [scrollY, setScrollY] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
+    const handleScroll = () => {} // do nothing if not using scrollY
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
