@@ -1,8 +1,7 @@
 "use client"
 
 import { Moon, Sun } from "lucide-react"
-import { useContext } from "react"
-import { ThemeContext } from "./ThemeContext"
+import { useTheme } from "./ThemeContext"
 
 interface ThemeToggleProps {
   variant?: "floating" | "inline" | "navbar"
@@ -11,7 +10,7 @@ interface ThemeToggleProps {
 }
 
 export default function ThemeToggle({ variant = "floating", size = "md", className = "" }: ThemeToggleProps) {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme, toggleTheme } = useTheme()
 
   const sizeClasses = {
     sm: "w-8 h-8 p-1.5",

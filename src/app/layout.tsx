@@ -1,5 +1,6 @@
 import './globals.css';
 import type { ReactNode } from 'react';
+import { ThemeProvider } from '../context/ThemeContext';
 
 export const metadata = {
   title: 'Portfolio',
@@ -8,9 +9,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-black min-h-screen">
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-background text-foreground min-h-screen transition-colors duration-300">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
