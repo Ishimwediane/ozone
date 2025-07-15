@@ -25,7 +25,7 @@ export default function HeroSection() {
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-center space-x-2">
                 <div className="w-8 sm:w-12 h-0.5 bg-yellow-400"></div>
-                <span className="text-yellow-400 font-medium tracking-wider uppercase text-xs sm:text-sm">
+                <span className="text-yellow-400 font-medium tracking-wider uppercase text-xs sm:text-sm ${theme === 'dark' ? '' : 'text-yellow-600'}">
                   Creative Excellence
                 </span>
               </div>
@@ -34,9 +34,9 @@ export default function HeroSection() {
                 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-black"}`}
               >
                 CAPTURING
-                <span className="block text-yellow-400">MOMENTS</span>
+                <span className="block text-yellow-400 ${theme === 'dark' ? '' : 'text-yellow-600'}">MOMENTS</span>
                 <span className="block">EMPOWERING</span>
-                <span className="block text-yellow-400">DREAMS</span>
+                <span className="block text-yellow-400 ${theme === 'dark' ? '' : 'text-yellow-600'}">DREAMS</span>
               </h1>
 
               <p
@@ -50,7 +50,7 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 py-4 sm:py-6">
               <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-yellow-400">10+</div>
+                <div className="text-xl sm:text-2xl font-bold ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600'}">10+</div>
                 <div
                   className={`text-xs sm:text-sm transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}
                 >
@@ -78,7 +78,7 @@ export default function HeroSection() {
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/25"
+                className="${theme === 'dark' ? 'bg-yellow-400 hover:bg-yellow-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/25"
                 onClick={() => {
                   const gallery = document.getElementById('gallery');
                   if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });

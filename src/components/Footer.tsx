@@ -5,10 +5,11 @@ import { useRef, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 
 const images = [
-  "/model.webp",
-  "/model1.webp",
-  "/nature.webp",
-  "/photo.webp",
+  "/fash.jpg",
+  "/fash1.jpg",
+  "/photo.jpg",
+  "/photo5.jpg",
+  "/photo1.jpg",
   "/ocean.jpg",
 ];
 
@@ -59,8 +60,11 @@ export default function Footer() {
               style={{ scrollSnapType: "none" }}
             >
               {images.concat(images).map((src, idx) => (
-                <div
+                <a
                   key={idx}
+                  href="https://www.instagram.com/naf_model_empire/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="min-w-[140px] sm:min-w-[180px] h-[140px] sm:h-[180px] rounded-lg sm:rounded-xl overflow-hidden border-2 border-yellow-400 flex-shrink-0 shadow-lg"
                 >
                   <Image
@@ -70,7 +74,7 @@ export default function Footer() {
                     height={180}
                     className="object-cover w-full h-full"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>

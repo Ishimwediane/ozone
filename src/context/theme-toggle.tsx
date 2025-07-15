@@ -34,7 +34,7 @@ export default function ThemeToggle({ variant = "floating", size = "md", classNa
     ${
       theme === "dark"
         ? "bg-black text-yellow-400 hover:bg-yellow-400/10 focus:ring-offset-black"
-        : "bg-white text-yellow-400 hover:bg-yellow-400/10 focus:ring-offset-white"
+        : "bg-white text-yellow-900 hover:bg-yellow-400/10 focus:ring-offset-white"
     }
   `
 

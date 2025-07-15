@@ -6,25 +6,19 @@ import Image from "next/image"
 const testimonials = [
   {
     id: 1,
-    name: "Kayla Bryant",
-    image: "/images/kayla-bryant.png",
+    name: "ISHIMWE Diane",
+    image: "/Diane.jpg",
     quote:
-      "There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      "I had the pleasure of working with them on a photoshoot, and it was an amazing experience. They are professional, creative, and made the whole process enjoyable. I would definitely recommend their services to anyone!"
   },
   {
     id: 2,
-    name: "Marcus Johnson",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "IRADUKUNDA Michel",
+    image: "/Michel.jpg",
     quote:
       "The service exceeded all my expectations. Professional, reliable, and truly outstanding results that transformed our business completely.",
   },
-  {
-    id: 3,
-    name: "Sarah Chen",
-    image: "/placeholder.svg?height=80&width=80",
-    quote:
-      "Working with this team was an absolute pleasure. Their attention to detail and commitment to excellence is unmatched in the industry.",
-  },
+
 ]
 
 export default function Component() {

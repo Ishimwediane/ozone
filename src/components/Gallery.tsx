@@ -22,6 +22,7 @@ const films = [
 
 const eventImages = [
   "/umurava.mp4",
+  "/event.jpg",
 ]
 
 const artistImages = [
@@ -53,10 +54,10 @@ export default function Gallery() {
   return (
     <section id="gallery" className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} py-12 sm:py-16 px-4 transition-colors duration-300`}>
       <div className="max-w-6xl mx-auto">
-        <h2 className={`text-3xl sm:text-4xl font-bold font-serif mb-6 sm:mb-8 text-center ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-400'}`}>Gallery</h2>
+        <h2 className={`text-3xl sm:text-4xl font-bold font-serif mb-6 sm:mb-8 text-center ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600'}`}>Gallery</h2>
         <div className="flex justify-center mb-6 sm:mb-8 gap-3 sm:gap-4">
           <button
-            className={`px-4 sm:px-6 py-2 rounded-lg font-semibold text-base sm:text-lg transition-all border-2 ${tab === 'photos' ? 'bg-yellow-400 text-black border-yellow-400' : theme === 'dark' ? 'bg-black text-yellow-400 border-yellow-400/40 hover:bg-yellow-400/10' : 'bg-white text-yellow-400 border-yellow-400/40 hover:bg-yellow-400/10'}`}
+            className={`px-4 sm:px-6 py-2 rounded-lg font-semibold text-base sm:text-lg transition-all border-2 ${tab === 'photos' ? (theme === 'dark' ? 'bg-yellow-400 text-black border-yellow-400' : 'bg-yellow-500 text-black border-yellow-500') : theme === 'dark' ? 'bg-black text-yellow-400 border-yellow-400/40 hover:bg-yellow-400/10' : 'bg-white text-yellow-600 border-yellow-500/40 hover:bg-yellow-500/10'}`}
             onClick={() => setTab('photos')}
           >
             Photos
@@ -90,10 +91,11 @@ export default function Gallery() {
           {images.map((src, idx) => (
             <div key={idx} className={`relative group overflow-hidden shadow-lg rounded-lg ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
               {src.endsWith('.mp4') ? (
-                <video src={src} className="object-cover w-full h-full" width={400} height={300} muted autoPlay loop playsInline />
+                <video src={src} className="object-cover w-full h-full max-w-[300px] max-h-[200px] mx-auto" width={300} height={200} muted autoPlay loop playsInline />
               ) : (
-                <Image src={src} alt="Gallery" width={400} height={300} className="object-cover w-full h-full" />
+                <Image src={src} alt="Gallery" width={300} height={200} className="object-cover w-full h-full max-w-[300px] max-h-[200px] mx-auto" />
               )}
+              {/* Enable + icon/modal for all tabs */}
               <button
                 onClick={() => setOpenIdx(idx)}
                 className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -106,8 +108,8 @@ export default function Gallery() {
           ))}
         </div>
       </div>
-      {/* Modal/Lightbox */}
-      {openIdx !== null && (
+      {/* Modal/Lightbox for all except artist */}
+      {openIdx !== null && tab !== 'artist' && (
         <div className="fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4">
           <button
             onClick={() => setOpenIdx(null)}
@@ -130,7 +132,7 @@ export default function Gallery() {
               alt="Gallery Large"
               width={800}
               height={600}
-              className="max-h-[80vh] w-auto max-w-full"
+              className="max-h-[80vh] w-auto max-w-full rounded-lg shadow-lg"
               style={{ objectFit: "contain" }}
             />
           )}

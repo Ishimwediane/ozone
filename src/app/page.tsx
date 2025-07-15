@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import EmpoweringHer from '../components/EmpoweringHer';
-import Model from '../components/Model';
+
 import Gallery from '../components/Gallery';
 import Testimonies from '../components/Testimonies';
 import Team from '../components/Team';
@@ -27,7 +27,7 @@ export default function Home() {
       <div id="gallery">
         <Gallery />
       </div>
-      <Model />
+   
       <Testimonies />
       <div id="team">
         <Team />

@@ -69,7 +69,7 @@ export default function Navbar() {
             href={link.href}
             className={`
               relative transition-all duration-300 font-medium text-base lg:text-lg group
-              ${theme === "dark" ? "text-white hover:text-yellow-400" : "text-black hover:text-yellow-400"}
+              ${theme === "dark" ? "text-white hover:text-yellow-400" : "text-black hover:text-yellow-600"}
             `}
           >
             {link.name}
@@ -90,7 +90,7 @@ export default function Navbar() {
             ${
               theme === "dark"
                 ? "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-black"
-                : "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-white"
+                : "bg-transparent hover:bg-yellow-500/10 focus:ring-offset-white"
             }
           `}
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
@@ -109,7 +109,7 @@ export default function Navbar() {
             {/* Sun icon */}
             <Sun
               className={`
-                w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 absolute transition-all duration-300 ease-in-out
+                w-5 h-5 sm:w-6 sm:h-6 ${theme === "dark" ? "text-yellow-400" : "text-yellow-600"} absolute transition-all duration-300 ease-in-out
                 ${theme === "dark" ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"}
               `}
             />
@@ -117,7 +117,7 @@ export default function Navbar() {
             {/* Moon icon */}
             <Moon
               className={`
-                w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 absolute transition-all duration-300 ease-in-out
+                w-5 h-5 sm:w-6 sm:h-6 ${theme === "dark" ? "text-yellow-400" : "text-yellow-600"} absolute transition-all duration-300 ease-in-out
                 ${theme === "dark" ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"}
               `}
             />
@@ -144,7 +144,7 @@ export default function Navbar() {
             ${
               theme === "dark"
                 ? "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-black"
-                : "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-white"
+                : "bg-transparent hover:bg-yellow-500/10 focus:ring-offset-white"
             }
           `}
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
@@ -175,7 +175,7 @@ export default function Navbar() {
             ${
               theme === "dark"
                 ? "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-black"
-                : "bg-transparent hover:bg-yellow-400/10 focus:ring-offset-white"
+                : "bg-transparent hover:bg-yellow-500/10 focus:ring-offset-white"
             }
           `}
           aria-label="Toggle mobile menu"
@@ -209,7 +209,7 @@ export default function Navbar() {
                 onClick={handleNavLinkClick}
                 className={`
                   block py-3 px-4 rounded-lg transition-all duration-300 font-medium text-lg
-                  hover:bg-yellow-400/10 hover:text-yellow-400
+                  hover:bg-yellow-400/10 hover:text-yellow-600
                   ${theme === "dark" ? "text-white" : "text-black"}
                 `}
               >
