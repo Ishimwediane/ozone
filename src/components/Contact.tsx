@@ -33,7 +33,8 @@ export default function Contact() {
         setError(data.message || 'Failed to send message. Please try again.')
       }
     } catch (err) {
-      setError('Failed to send message. Please try again.')
+      console.error(err);
+      setError('Failed to send message. Please try again.');
     } finally {
       setLoading(false)
     }
