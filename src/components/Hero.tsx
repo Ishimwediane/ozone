@@ -26,7 +26,7 @@ export default function HeroSection() {
               <div className="flex items-center space-x-2">
                 <div className="w-8 sm:w-12 h-0.5 bg-yellow-400"></div>
                 <span className="text-yellow-400 font-medium tracking-wider uppercase text-xs sm:text-sm ${theme === 'dark' ? '' : 'text-yellow-600'}">
-                  Creative Excellence
+                  Ozone entertainment
                 </span>
               </div>
 
@@ -132,7 +132,7 @@ export default function HeroSection() {
               {/* Image */}
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-yellow-400/30 shadow-2xl shadow-yellow-400/10">
                 <Image
-                  src="/model.webp?height=800&width=600"
+                  src="/model.jpg?height=800&width=600"
                   alt="Professional Creative Services"
                   width={600}
                   height={800}
@@ -143,7 +143,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 {/* Floating Badge */}
                 <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-black/80 backdrop-blur-sm text-yellow-400 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-yellow-400/30">
-                  ✨ Empowering Women
+                  ✨ Empowering Her
                 </div>
               </div>
             </div>

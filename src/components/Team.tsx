@@ -4,21 +4,21 @@ import { useTheme } from "../context/ThemeContext"
 
 const team = [
   {
-    name: "Augiste Hategekimama",
+    name: "Augustin HATEGEKIMANA",
     role: "Founder & CEO",
     image: "/AUGY1.jpg",
   
   },
   {
-    name: "Solange Abayisenga",
+    name: "Solange ABAYISENGA",
     role: "Founder & Chief financial officerand secretary",
     image: "/Solange .jpg",
    
   },
   {
-    name: "Nadine Igihozo",
+    name: "Nadine IGIHOZO",
     role: "Founder & Chief marketing officer",
-    image: "/nature.webp",
+    image: "/IGIHOZO.jpg",
    
   },
 ]

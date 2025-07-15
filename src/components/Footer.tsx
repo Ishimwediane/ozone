@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className={`text-center py-4 text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-300'}`}>
-          © {new Date().getFullYear()} Your Company. All rights reserved.
+          © {new Date().getFullYear()} Ozone entertainment. All rights reserved.
         </div>
       </footer>
 

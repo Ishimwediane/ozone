@@ -9,7 +9,7 @@ export default function EmpoweringHer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left: Text Content */}
         <div>
-          <h2 className={`text-3xl sm:text-4xl font-bold font-serif mb-4 ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-500'}`}>Empowering Women Through Creativity</h2>
+          <h2 className={`text-3xl sm:text-4xl font-bold font-serif mb-4 ${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-500'}`}>Empowering Her in Multimedia </h2>
           <p className={`text-base sm:text-lg mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
             Our initiative is dedicated to uplifting women by providing creative training, mentorship, and opportunities in photography, videography, and modeling. We believe in the power of creativity to transform lives and communities.
           </p>
