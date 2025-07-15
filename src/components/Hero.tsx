@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className={`relative mt-16 sm:mt-20 min-h-screen flex items-center overflow-hidden transition-colors duration-300 ${theme === "dark" ? "bg-black" : "bg-white"}`}
+      className={`relative mt-16 sm:mt-26 min-h-screen flex items-center overflow-hidden transition-colors duration-300 ${theme === "dark" ? "bg-black" : "bg-white"}`}
     >
       {/* Background Pattern */}
       <div className={`absolute inset-0 ${theme === "dark" ? "opacity-5" : "opacity-10"}`}>
