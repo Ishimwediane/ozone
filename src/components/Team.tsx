@@ -11,7 +11,7 @@ const team = [
   },
   {
     name: "Solange ABAYISENGA",
-    role: "Founder & Chief financial officerand secretary",
+    role: "Founder & Chief financial officer and secretary",
     image: "/Solange .jpg",
    
   },

@@ -22,6 +22,7 @@ const films = [
 
 const eventImages = [
   "/umurava.mp4",
+  "/Event-2024.mp4",
   "/event.jpg",
 ]
 
