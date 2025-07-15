@@ -81,10 +81,7 @@ export default function Team() {
 
               {/* Main Card */}
               <div className={`relative ${theme === 'dark' ? 'bg-black/60' : 'bg-white/80'} backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-yellow-400/30 shadow-2xl shadow-yellow-400/10 group-hover:shadow-yellow-400/20 transition-all duration-300 group-hover:border-yellow-400/50`}>
-                {/* Floating Badge */}
-                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-3 sm:px-4 py-1 rounded-full text-xs font-bold">
-                  {member.experience}
-                </div>
+                {/* Floating Badge removed */}
 
                 {/* Profile Image */}
                 <div className="relative mb-4 sm:mb-6">
@@ -110,7 +107,6 @@ export default function Team() {
                   <p className={`text-sm sm:text-lg font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{member.role}</p>
                   <div className={`flex items-center justify-center space-x-2 text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     <Award className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>{member.specialty}</span>
                   </div>
                 </div>
 
